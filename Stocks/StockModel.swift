@@ -7,21 +7,6 @@
 
 import Foundation
 
-//{
-//  "symbol": "AAPL",
-//  "companyName": "Apple Inc.",
-//  "primaryExchange": "Nasdaq Global Select",
-//  "sector": "Technology",
-//  "calculationPrice": "tops",
-//  "open": 154,
-//  "openTime": 1506605400394,
-//  "close": 153.28,
-//  "closeTime": 1506605400394,
-//  "high": 154.80,
-//  "low": 153.25,
-//  "latestPrice": 158.73,
-//}
-
 struct StockModel: Codable {
   let symbol: String?
   let companyName: String?

@@ -9,14 +9,11 @@
 /* Begin PBXBuildFile section */
 		3E292ADE26E5523700E0A119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E292ADD26E5523700E0A119 /* AppDelegate.swift */; };
 		3E292AE026E5523700E0A119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E292ADF26E5523700E0A119 /* SceneDelegate.swift */; };
-		3E292AE526E5523700E0A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E292AE326E5523700E0A119 /* Main.storyboard */; };
 		3E292AE826E5523700E0A119 /* Stocks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E292AE626E5523700E0A119 /* Stocks.xcdatamodeld */; };
 		3E292AEA26E5523B00E0A119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E292AE926E5523B00E0A119 /* Assets.xcassets */; };
-		3E292AED26E5523B00E0A119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E292AEB26E5523B00E0A119 /* LaunchScreen.storyboard */; };
 		3E5E873026E5559C009645AE /* StocksApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E872F26E5559C009645AE /* StocksApi.swift */; };
 		3E5E873426E55841009645AE /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E873326E55841009645AE /* StockModel.swift */; };
 		3E5E873B26E55AA9009645AE /* StockScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E873626E55AA9009645AE /* StockScreenPresenter.swift */; };
-		3E5E873C26E55AA9009645AE /* StockScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E873726E55AA9009645AE /* StockScreenRouter.swift */; };
 		3E5E873D26E55AA9009645AE /* StockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E873826E55AA9009645AE /* StockScreenViewController.swift */; };
 		3E5E873E26E55AA9009645AE /* StockScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E873926E55AA9009645AE /* StockScreenAssembly.swift */; };
 		3E5E873F26E55AA9009645AE /* StockScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E873A26E55AA9009645AE /* StockScreenInteractor.swift */; };
@@ -28,15 +25,12 @@
 		3E292ADA26E5523700E0A119 /* Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E292ADD26E5523700E0A119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E292ADF26E5523700E0A119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3E292AE426E5523700E0A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E292AE726E5523700E0A119 /* Stocks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stocks.xcdatamodel; sourceTree = "<group>"; };
 		3E292AE926E5523B00E0A119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3E292AEC26E5523B00E0A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E292AEE26E5523B00E0A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E5E872F26E5559C009645AE /* StocksApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksApi.swift; sourceTree = "<group>"; };
 		3E5E873326E55841009645AE /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		3E5E873626E55AA9009645AE /* StockScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockScreenPresenter.swift; sourceTree = "<group>"; };
-		3E5E873726E55AA9009645AE /* StockScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockScreenRouter.swift; sourceTree = "<group>"; };
 		3E5E873826E55AA9009645AE /* StockScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockScreenViewController.swift; sourceTree = "<group>"; };
 		3E5E873926E55AA9009645AE /* StockScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockScreenAssembly.swift; sourceTree = "<group>"; };
 		3E5E873A26E55AA9009645AE /* StockScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockScreenInteractor.swift; sourceTree = "<group>"; };
@@ -92,14 +86,11 @@
 				3E5E872F26E5559C009645AE /* StocksApi.swift */,
 				3E5E873326E55841009645AE /* StockModel.swift */,
 				3E5E873626E55AA9009645AE /* StockScreenPresenter.swift */,
-				3E5E873726E55AA9009645AE /* StockScreenRouter.swift */,
 				3E5E873826E55AA9009645AE /* StockScreenViewController.swift */,
 				3E5E874226E568E9009645AE /* InfoStackView.swift */,
 				3E5E873926E55AA9009645AE /* StockScreenAssembly.swift */,
 				3E5E873A26E55AA9009645AE /* StockScreenInteractor.swift */,
-				3E292AE326E5523700E0A119 /* Main.storyboard */,
 				3E292AE926E5523B00E0A119 /* Assets.xcassets */,
-				3E292AEB26E5523B00E0A119 /* LaunchScreen.storyboard */,
 				3E292AEE26E5523B00E0A119 /* Info.plist */,
 				3E292AE626E5523700E0A119 /* Stocks.xcdatamodeld */,
 			);
@@ -174,9 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E292AED26E5523B00E0A119 /* LaunchScreen.storyboard in Resources */,
 				3E292AEA26E5523B00E0A119 /* Assets.xcassets in Resources */,
-				3E292AE526E5523700E0A119 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,30 +228,10 @@
 				3E5E873026E5559C009645AE /* StocksApi.swift in Sources */,
 				3E292AE826E5523700E0A119 /* Stocks.xcdatamodeld in Sources */,
 				3E292AE026E5523700E0A119 /* SceneDelegate.swift in Sources */,
-				3E5E873C26E55AA9009645AE /* StockScreenRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		3E292AE326E5523700E0A119 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3E292AE426E5523700E0A119 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3E292AEB26E5523B00E0A119 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3E292AEC26E5523B00E0A119 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3E292AEF26E5523B00E0A119 /* Debug */ = {

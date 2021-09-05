@@ -16,13 +16,11 @@ protocol StockScreenViewOutput: class {
 class StockScreenPresenter: StockScreenViewOutput {
 
     weak var view: StockScreenViewInput?
-
-    private let router: StockScreenRouter
     
     var interactor: StockScreenInteractorInput?
 
-    init(router: StockScreenRouter) {
-        self.router = router
+    init() {
+
     }
   
   func didSelect(abbreviation: String, complition: @escaping () -> Void) {

@@ -13,22 +13,19 @@ class AppRouter {
 
 class StockScreenAssembly {
 
-    func createStockScreen(appRouter: AppRouter) -> StockScreenViewInput {
-    
-        let router = StockScreenRouter(appRouter: appRouter)
-        let presenter = StockScreenPresenter(router: router)
-        let viewController = self.createStockScreenView()
-        let interactor = StockScreenInteractor()
-        presenter.view = viewController
-        viewController.presenter = presenter
-        presenter.interactor = interactor
-        return viewController
-    }
+  func createStockScreen(appRouter: AppRouter) -> StockScreenViewInput {
+    let presenter = StockScreenPresenter()
+    let viewController = self.createStockScreenView()
+    let interactor = StockScreenInteractor()
+    presenter.view = viewController
+    viewController.presenter = presenter
+    presenter.interactor = interactor
+    return viewController
+  }
 
-    private
-    func createStockScreenView() -> StockScreenViewController {
-        let viewController = StockScreenViewController()
-    
-        return viewController
-    }
+  private
+  func createStockScreenView() -> StockScreenViewController {
+    let viewController = StockScreenViewController()
+    return viewController
+  }
 }

@@ -20,7 +20,7 @@ protocol StockScreenViewInput: class {
 
 class StockScreenViewController: UIViewController{
   var presenter: StockScreenViewOutput?
-
+  
   var viewController: UIViewController { return self }
   
   let stocks = ["Apple": "AAPL",
@@ -34,7 +34,7 @@ class StockScreenViewController: UIViewController{
   override func loadView() {
     super.loadView()
   }
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
@@ -50,7 +50,7 @@ class StockScreenViewController: UIViewController{
       self?.changeCompanyPicker.isHidden = false
     }
   }
-
+  
   func setupUI() {
     view.backgroundColor = .init(white: 1.0, alpha: 0.7)
     view.addSubview(changeCompanyPicker)
@@ -63,7 +63,7 @@ class StockScreenViewController: UIViewController{
       make.bottom.equalToSuperview().offset(40)
       make.height.equalTo(300)
     }
-
+    
     vStack.snp.makeConstraints { (make) in
       make.left.equalToSuperview().offset(40)
       make.top.equalTo(view.safeAreaLayoutGuide)
@@ -76,22 +76,22 @@ class StockScreenViewController: UIViewController{
     vStack.isHidden = true
     changeCompanyPicker.isHidden = true
   }
-
+  
 }
 
 extension StockScreenViewController: UIPickerViewDelegate, UIPickerViewDataSource {
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
     1
   }
-
+  
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
     stocks.count
-
+    
   }
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     Array(stocks.keys)[row]
   }
-
+  
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     UIView.animate(withDuration: 0.3, delay: 0.0, options:[], animations: { [weak self] in
       self?.view.backgroundColor = self?.view.backgroundColor?.withAlphaComponent(0.7)
@@ -110,15 +110,15 @@ extension StockScreenViewController: StockScreenViewInput {
   func setCompanyName(name: String) {
     vStack.companyNameLabel.text = name
   }
-
+  
   func setSymbol(name: String) {
     vStack.symbolLabel.text = name
   }
-
+  
   func setPrice(name: String) {
     vStack.priceLabel.text = name
   }
-
+  
   func setPriceChange(name: String) {
     vStack.priceChangeLabel.text = name
   }

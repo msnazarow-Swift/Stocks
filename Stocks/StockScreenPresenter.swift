@@ -24,6 +24,7 @@ class StockScreenPresenter: StockScreenViewOutput {
     init(router: StockScreenRouter) {
         self.router = router
     }
+  
   func didSelect(abbreviation: String) {
     guard let interactor = interactor, let view = view else {
       print("Assbemle error")

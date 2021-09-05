@@ -3,29 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3E292ADE26E5523700E0A119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E292ADD26E5523700E0A119 /* AppDelegate.swift */; };
 		3E292AE026E5523700E0A119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E292ADF26E5523700E0A119 /* SceneDelegate.swift */; };
-		3E292AE226E5523700E0A119 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E292AE126E5523700E0A119 /* ViewController.swift */; };
 		3E292AE526E5523700E0A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E292AE326E5523700E0A119 /* Main.storyboard */; };
 		3E292AE826E5523700E0A119 /* Stocks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E292AE626E5523700E0A119 /* Stocks.xcdatamodeld */; };
 		3E292AEA26E5523B00E0A119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E292AE926E5523B00E0A119 /* Assets.xcassets */; };
 		3E292AED26E5523B00E0A119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E292AEB26E5523B00E0A119 /* LaunchScreen.storyboard */; };
+		3E5E873026E5559C009645AE /* StocksApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E872F26E5559C009645AE /* StocksApi.swift */; };
+		3E5E873426E55841009645AE /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E873326E55841009645AE /* StockModel.swift */; };
+		3E5E873B26E55AA9009645AE /* StockScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E873626E55AA9009645AE /* StockScreenPresenter.swift */; };
+		3E5E873C26E55AA9009645AE /* StockScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E873726E55AA9009645AE /* StockScreenRouter.swift */; };
+		3E5E873D26E55AA9009645AE /* StockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E873826E55AA9009645AE /* StockScreenViewController.swift */; };
+		3E5E873E26E55AA9009645AE /* StockScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E873926E55AA9009645AE /* StockScreenAssembly.swift */; };
+		3E5E873F26E55AA9009645AE /* StockScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E873A26E55AA9009645AE /* StockScreenInteractor.swift */; };
+		9FEA7616EED72A5BF7AB4F99 /* Pods_Stocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98C57C2FFCB9182122C6C4F /* Pods_Stocks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E292ADA26E5523700E0A119 /* Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E292ADD26E5523700E0A119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E292ADF26E5523700E0A119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3E292AE126E5523700E0A119 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E292AE426E5523700E0A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E292AE726E5523700E0A119 /* Stocks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stocks.xcdatamodel; sourceTree = "<group>"; };
 		3E292AE926E5523B00E0A119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E292AEC26E5523B00E0A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E292AEE26E5523B00E0A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E5E872F26E5559C009645AE /* StocksApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksApi.swift; sourceTree = "<group>"; };
+		3E5E873326E55841009645AE /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		3E5E873626E55AA9009645AE /* StockScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockScreenPresenter.swift; sourceTree = "<group>"; };
+		3E5E873726E55AA9009645AE /* StockScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockScreenRouter.swift; sourceTree = "<group>"; };
+		3E5E873826E55AA9009645AE /* StockScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockScreenViewController.swift; sourceTree = "<group>"; };
+		3E5E873926E55AA9009645AE /* StockScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockScreenAssembly.swift; sourceTree = "<group>"; };
+		3E5E873A26E55AA9009645AE /* StockScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockScreenInteractor.swift; sourceTree = "<group>"; };
+		5DD04D124A388343C76DF7F3 /* Pods-Stocks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stocks.debug.xcconfig"; path = "Target Support Files/Pods-Stocks/Pods-Stocks.debug.xcconfig"; sourceTree = "<group>"; };
+		B98C57C2FFCB9182122C6C4F /* Pods_Stocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C379BF5A58477A5FF6479BE7 /* Pods-Stocks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stocks.release.xcconfig"; path = "Target Support Files/Pods-Stocks/Pods-Stocks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEA7616EED72A5BF7AB4F99 /* Pods_Stocks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0973EF244FA66B12F6EA7F0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B98C57C2FFCB9182122C6C4F /* Pods_Stocks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3E292AD126E5523700E0A119 = {
 			isa = PBXGroup;
 			children = (
 				3E292ADC26E5523700E0A119 /* Stocks */,
 				3E292ADB26E5523700E0A119 /* Products */,
+				DD6ACBC5BA080032DF7765E9 /* Pods */,
+				0973EF244FA66B12F6EA7F0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,7 +87,13 @@
 			children = (
 				3E292ADD26E5523700E0A119 /* AppDelegate.swift */,
 				3E292ADF26E5523700E0A119 /* SceneDelegate.swift */,
-				3E292AE126E5523700E0A119 /* ViewController.swift */,
+				3E5E872F26E5559C009645AE /* StocksApi.swift */,
+				3E5E873326E55841009645AE /* StockModel.swift */,
+				3E5E873626E55AA9009645AE /* StockScreenPresenter.swift */,
+				3E5E873726E55AA9009645AE /* StockScreenRouter.swift */,
+				3E5E873826E55AA9009645AE /* StockScreenViewController.swift */,
+				3E5E873926E55AA9009645AE /* StockScreenAssembly.swift */,
+				3E5E873A26E55AA9009645AE /* StockScreenInteractor.swift */,
 				3E292AE326E5523700E0A119 /* Main.storyboard */,
 				3E292AE926E5523B00E0A119 /* Assets.xcassets */,
 				3E292AEB26E5523B00E0A119 /* LaunchScreen.storyboard */,
@@ -70,6 +103,15 @@
 			path = Stocks;
 			sourceTree = "<group>";
 		};
+		DD6ACBC5BA080032DF7765E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DD04D124A388343C76DF7F3 /* Pods-Stocks.debug.xcconfig */,
+				C379BF5A58477A5FF6479BE7 /* Pods-Stocks.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E292AF126E5523B00E0A119 /* Build configuration list for PBXNativeTarget "Stocks" */;
 			buildPhases = (
+				5D2FAABF9C72F25B52AD09AB /* [CP] Check Pods Manifest.lock */,
 				3E292AD626E5523700E0A119 /* Sources */,
 				3E292AD726E5523700E0A119 /* Frameworks */,
 				3E292AD826E5523700E0A119 /* Resources */,
+				F7C5C6110F170E227A705CF9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,15 +179,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5D2FAABF9C72F25B52AD09AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stocks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7C5C6110F170E227A705CF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stocks/Pods-Stocks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stocks/Pods-Stocks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stocks/Pods-Stocks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3E292AD626E5523700E0A119 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E292AE226E5523700E0A119 /* ViewController.swift in Sources */,
+				3E5E873B26E55AA9009645AE /* StockScreenPresenter.swift in Sources */,
+				3E5E873F26E55AA9009645AE /* StockScreenInteractor.swift in Sources */,
+				3E5E873E26E55AA9009645AE /* StockScreenAssembly.swift in Sources */,
 				3E292ADE26E5523700E0A119 /* AppDelegate.swift in Sources */,
+				3E5E873426E55841009645AE /* StockModel.swift in Sources */,
+				3E5E873D26E55AA9009645AE /* StockScreenViewController.swift in Sources */,
+				3E5E873026E5559C009645AE /* StocksApi.swift in Sources */,
 				3E292AE826E5523700E0A119 /* Stocks.xcdatamodeld in Sources */,
 				3E292AE026E5523700E0A119 /* SceneDelegate.swift in Sources */,
+				3E5E873C26E55AA9009645AE /* StockScreenRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +379,7 @@
 		};
 		3E292AF226E5523B00E0A119 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DD04D124A388343C76DF7F3 /* Pods-Stocks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +399,7 @@
 		};
 		3E292AF326E5523B00E0A119 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C379BF5A58477A5FF6479BE7 /* Pods-Stocks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

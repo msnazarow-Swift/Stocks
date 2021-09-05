@@ -29,7 +29,7 @@ class StockScreenViewController: UIViewController{
                 "Amazon": "AMZN",
                 "Facebook": "FB"]
   let vStack = InfoStackView()
-
+  let activityIndicator = UIActivityIndicatorView()
   let changeCompanyPicker = UIPickerView()
   override func loadView() {
     super.loadView()
@@ -38,16 +38,25 @@ class StockScreenViewController: UIViewController{
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
+    activityIndicator.startAnimating()
     changeCompanyPicker.dataSource = self
     changeCompanyPicker.delegate = self
-    presenter?.didSelect(abbreviation: Array(stocks.values)[changeCompanyPicker.selectedRow(inComponent: 0)])
+    presenter?.didSelect(abbreviation: Array(stocks.values)[changeCompanyPicker.selectedRow(inComponent: 0)]){ [weak self] in
+      UIView.animate(withDuration: 0.5, delay: 0.0, options:[], animations: {
+        self?.view.backgroundColor = self?.view.backgroundColor?.withAlphaComponent(1)
+      })
+      self?.activityIndicator.stopAnimating()
+      self?.vStack.isHidden = false
+      self?.changeCompanyPicker.isHidden = false
+    }
   }
 
   func setupUI() {
-    view.backgroundColor = .white
+    view.backgroundColor = .init(white: 1.0, alpha: 0.7)
     view.addSubview(changeCompanyPicker)
     view.addSubview(vStack)
-
+    view.addSubview(activityIndicator)
+    activityIndicator.hidesWhenStopped = true
     changeCompanyPicker.snp.makeConstraints { (make) in
       make.left.equalToSuperview().offset(40)
       make.right.equalToSuperview().inset(40)
@@ -61,7 +70,11 @@ class StockScreenViewController: UIViewController{
       make.right.equalToSuperview().inset(40)
       make.bottom.equalTo(changeCompanyPicker.snp.top)
     }
-    
+    activityIndicator.snp.makeConstraints { (make) in
+      make.center.equalToSuperview()
+    }
+    vStack.isHidden = true
+    changeCompanyPicker.isHidden = true
   }
 
 }
@@ -80,7 +93,16 @@ extension StockScreenViewController: UIPickerViewDelegate, UIPickerViewDataSourc
   }
 
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-    presenter?.didSelect(abbreviation: Array(stocks.values)[row])
+    UIView.animate(withDuration: 0.3, delay: 0.0, options:[], animations: { [weak self] in
+      self?.view.backgroundColor = self?.view.backgroundColor?.withAlphaComponent(0.7)
+    })
+    activityIndicator.startAnimating()
+    presenter?.didSelect(abbreviation: Array(stocks.values)[row]){ [weak self] in
+      UIView.animate(withDuration: 0.3, delay: 0.0, options:[], animations: {
+        self?.view.backgroundColor = self?.view.backgroundColor?.withAlphaComponent(1)
+      })
+      self?.activityIndicator.stopAnimating()
+    }
   }
 }
 

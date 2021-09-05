@@ -10,7 +10,7 @@ import Foundation
 
 
 protocol StockScreenViewOutput: class {
-  func didSelect(abbreviation: String)
+  func didSelect(abbreviation: String, complition: @escaping () -> Void)
 }
 
 class StockScreenPresenter: StockScreenViewOutput {
@@ -25,7 +25,7 @@ class StockScreenPresenter: StockScreenViewOutput {
         self.router = router
     }
   
-  func didSelect(abbreviation: String) {
+  func didSelect(abbreviation: String, complition: @escaping () -> Void) {
     guard let interactor = interactor, let view = view else {
       print("Assbemle error")
       return
@@ -35,6 +35,7 @@ class StockScreenPresenter: StockScreenViewOutput {
       view.setPrice(name: String(stockModel.latestPrice ?? 0))
       view.setSymbol(name: stockModel.symbol ?? "" )
       view.setPriceChange(name: stockModel.calculationPrice ?? "")
+      complition()
     }
   }
 }

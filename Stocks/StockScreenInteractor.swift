@@ -8,35 +8,27 @@
 
 import Foundation
 import Moya
-protocol StockScreenInteractorInput: class {
-  var presenter: StockScreenInteractorOutput? { get set }
-  func getCompany(abbreviation: String, complition: @escaping (StockModel) -> Void)
-}
-
-protocol StockScreenInteractorOutput: class {
-
+protocol StockScreenInteractorInput: AnyObject {
+    func getCompany(abbreviation: String, complition: @escaping (StockModel) -> Void)
 }
 
 class StockScreenInteractor: StockScreenInteractorInput {
-
-  weak var presenter: StockScreenInteractorOutput?
-
-  let provider = MoyaProvider<StocksService>()
-  func getCompany(abbreviation: String, complition: @escaping (StockModel) -> Void) {
-    provider.request(.getCompany(abbreviation: abbreviation)) { (result) in
-      switch result{
-      case .success(let response):
-        do {
-          let decoder = JSONDecoder()
-          decoder.dataDecodingStrategy = .deferredToData
-          let stockModel = try response.map(StockModel.self,using: decoder,failsOnEmptyData: false)
-          complition(stockModel)
-        } catch let error {
-          print(error)
+    let provider = MoyaProvider<StocksService>()
+    func getCompany(abbreviation: String, complition: @escaping (StockModel) -> Void) {
+        provider.request(.getCompany(abbreviation: abbreviation)) { result in
+            switch result {
+            case .success(let response):
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.dataDecodingStrategy = .deferredToData
+                    let stockModel = try response.map(StockModel.self, using: decoder, failsOnEmptyData: false)
+                    complition(stockModel)
+                } catch let error {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+            }
         }
-      case .failure(let error):
-        print(error)
-      }
     }
-  }
 }

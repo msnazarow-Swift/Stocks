@@ -9,31 +9,26 @@
 import Foundation
 
 
-protocol StockScreenViewOutput: class {
-  func didSelect(abbreviation: String, complition: @escaping () -> Void)
+protocol StockScreenViewOutput: AnyObject {
+    func didSelect(abbreviation: String, complition: @escaping () -> Void)
 }
 
 class StockScreenPresenter: StockScreenViewOutput {
-
     weak var view: StockScreenViewInput?
-    
+
     var interactor: StockScreenInteractorInput?
 
-    init() {
-
+    func didSelect(abbreviation: String, complition: @escaping () -> Void) {
+        guard let interactor = interactor, let view = view else {
+            print("Assbemle error")
+            return
+        }
+        interactor.getCompany(abbreviation: abbreviation) { stockModel in
+            view.setCompanyName(name: stockModel.companyName ?? "")
+            view.setPrice(name: String(stockModel.latestPrice ?? 0))
+            view.setSymbol(name: stockModel.symbol ?? "" )
+            view.setPriceChange(name: stockModel.calculationPrice ?? "")
+            complition()
+        }
     }
-  
-  func didSelect(abbreviation: String, complition: @escaping () -> Void) {
-    guard let interactor = interactor, let view = view else {
-      print("Assbemle error")
-      return
-    }
-    interactor.getCompany(abbreviation: abbreviation){ stockModel in
-      view.setCompanyName(name: stockModel.companyName ?? "")
-      view.setPrice(name: String(stockModel.latestPrice ?? 0))
-      view.setSymbol(name: stockModel.symbol ?? "" )
-      view.setPriceChange(name: stockModel.calculationPrice ?? "")
-      complition()
-    }
-  }
 }

@@ -7,25 +7,15 @@
 //
 
 import UIKit
-class AppRouter {
-
-}
 
 class StockScreenAssembly {
-
-  func createStockScreen(appRouter: AppRouter) -> StockScreenViewInput {
-    let presenter = StockScreenPresenter()
-    let viewController = self.createStockScreenView()
-    let interactor = StockScreenInteractor()
-    presenter.view = viewController
-    viewController.presenter = presenter
-    presenter.interactor = interactor
-    return viewController
-  }
-
-  private
-  func createStockScreenView() -> StockScreenViewController {
-    let viewController = StockScreenViewController()
-    return viewController
-  }
+    func createStockScreen() -> UIViewController {
+        let presenter = StockScreenPresenter()
+        let viewController = StockScreenViewController()
+        let interactor = StockScreenInteractor()
+        presenter.view = viewController
+        viewController.presenter = presenter
+        presenter.interactor = interactor
+        return viewController
+    }
 }

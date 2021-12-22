@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -114,6 +114,7 @@
 			buildConfigurationList = 3E292AF126E5523B00E0A119 /* Build configuration list for PBXNativeTarget "Stocks" */;
 			buildPhases = (
 				5D2FAABF9C72F25B52AD09AB /* [CP] Check Pods Manifest.lock */,
+				3EFB1F112773E9F80032FAD8 /* ShellScript */,
 				3E292AD626E5523700E0A119 /* Sources */,
 				3E292AD726E5523700E0A119 /* Frameworks */,
 				3E292AD826E5523700E0A119 /* Resources */,
@@ -172,6 +173,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3EFB1F112773E9F80032FAD8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script oswr drag a script file from your workspace to insert its path.\nswiftlint --no-cache --config ~/com.raywenderlich.swiftlint.yml \n";
+		};
 		5D2FAABF9C72F25B52AD09AB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
